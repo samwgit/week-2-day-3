@@ -34,19 +34,24 @@
   <main>
     <div class="container-fluid">
       <div class="row m-3 justify-content-center d-flex" id="scoop-cards">
+        <div class="row m-3 justify-content-center d-flex" id="vessel-cards">
+        </div>
       </div>
-    </div>
   </main>
 
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Cart</h5>
-      <button class="btn btn-dark" onclick="drawGoof()">Checkout</button>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <!-- TODO Put your carted items here -->
-    <p id="cartScoop"></p>
-  </div>
+    <button class="btn btn-dark" onclick="checkout()">Checkout</button>
+    <div class="row">
+      <p class="col-1 m-1">Total:</p>
+      <p class="col-1" id="sub-total"></p>
+      <p class="col-1 m-1">$</p>
+    </div>
+
+    <div id="cart" class="row"></div>
   </div>
 
   <footer>
